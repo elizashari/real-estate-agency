@@ -13,7 +13,7 @@ def new_buildings(apps, schema_editor):
 
 def old_buildings(apps, schema_editor):
     Flat = apps.get_model('property', 'Flat')
-    Flat.objects.exclude(construction_year__gte=NEW_BUILDING_YEAR).update(new_building=False)
+    Flat.objects.filter(construction_year__gte=NEW_BUILDING_YEAR).update(new_building=False)
 
 class Migration(migrations.Migration):
 

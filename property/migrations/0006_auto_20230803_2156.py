@@ -6,12 +6,12 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('property', '0005_complain'),
+        ('property', '0005_complaint'),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='complain',
+            model_name='complaint',
             name='text',
             field=models.TextField(blank=True, null=True, verbose_name='Текст жалобы'),
         ),

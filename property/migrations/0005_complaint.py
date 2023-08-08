@@ -14,12 +14,12 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='Complain',
+            name='Complaint',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('text', models.TextField(null=True, verbose_name='Текст жалобы')),
-                ('flat', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='complains', to='property.Flat', verbose_name='Квартира, на которую оставили жалобу')),
-                ('user', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='complains', to=settings.AUTH_USER_MODEL, verbose_name='Кто пожаловался')),
+                ('flat', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='complaints', to='property.Flat', verbose_name='Квартира, на которую оставили жалобу')),
+                ('user', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='complaints', to=settings.AUTH_USER_MODEL, verbose_name='Кто пожаловался')),
             ],
         ),
     ]
